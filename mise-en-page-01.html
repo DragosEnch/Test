@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mise en page 01</title>
+    <style>
+        body {
+            /*On commence par par annuler la marge par défaut pour profiter de tout l'espace de la page*/
+            margin: 0;
+        }
+
+        body * {
+            /* L'astérisque sert à tout selectionner, la faire précéder de "body" permet de dire que l'on veut tout sélectionner à l'interieur aussi dans notre cas
+            /* img , p , fonctionneirait aussi dans notre cas*/
+            width: 50%;
+        }
+
+        p {
+            border: 1px solid  black;
+            display: inline-block; /*le comporomis entre inline et block : permet de dimensionner (block) ET de cohabiter dans la largeur (inline)*/
+            box-sizing: border-box; /* Permet à la bordure de ne pas occuper d'espace suppliméntaire voir : bordure-et-padding.html */
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Il a fallu coller toutes les images ensemble en raison d'un comportement spécifique du THML vis à vis des retours à la ligne : ils sont convertis en espces, qui prennent un peu de largeur et empéchent les images d'utiliser la totalité de l'espcace -->
+    <img src="https://picsum.photos/200/300"><img src="https://picsum.photos/300/500"><img
+        src="https://picsum.photos/250/400"><img src="https://picsum.photos/200/200">
+
+    <p>Un paragraphe</p><p>Un paragraphe</p><p>Un paragraphe</p><p>Un paragraphe</p>
+
+    <!-- Par defaut on ne pourra pas obtenir des paragraphes côte-à-côte : les éléments block auront toujours une merge à droite qui complete leur largeur -->
+
+</body>
+
+</html>
